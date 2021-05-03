@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1291</width>
+    <height>943</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CV Movie Plot</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="3">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxScale">
+      <property name="prefix">
+       <string>scale: </string>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>1.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="labelVideoFormat">
+      <property name="text">
+       <string>Video format: --</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="3">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxXMax">
+      <property name="prefix">
+       <string>x max: </string>
+      </property>
+      <property name="minimum">
+       <double>-999999999999999983222784.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000000000000004764729344.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5" colspan="2">
+     <widget class="QLineEdit" name="lineEditFileNameOut"/>
+    </item>
+    <item row="8" column="3">
+     <widget class="QSpinBox" name="spinBoxGraphY">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>pos y: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="4">
+     <widget class="QCheckBox" name="checkBoxAutoScaleY">
+      <property name="text">
+       <string>Auto Scale Y</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QPushButton" name="pushButtonLoadGraph">
+      <property name="text">
+       <string>Load Graph Data...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="pushButtonZoomIn">
+      <property name="text">
+       <string>Zoom In</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1" colspan="6">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QCheckBox" name="checkBoxHasHeaders">
+      <property name="text">
+       <string>Header Labels</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxRotate">
+      <property name="prefix">
+       <string>rotation: </string>
+      </property>
+      <property name="suffix">
+       <string> º</string>
+      </property>
+      <property name="minimum">
+       <double>-360.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>360.000000000000000</double>
+      </property>
+      <property name="value">
+       <double>0.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="4">
+     <widget class="QSpinBox" name="spinBoxGraphW">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>width: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxFpsSet">
+      <property name="suffix">
+       <string> fps (-- native)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="5">
+     <widget class="QSpinBox" name="spinBoxGraphH">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>height: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLabel" name="labelCurrentFps">
+      <property name="text">
+       <string>FPS: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="5">
+     <widget class="QSpinBox" name="spinBoxFrame">
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+      <property name="prefix">
+       <string>Frame: </string>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="5">
+     <widget class="QCheckBox" name="checkBoxTightenY">
+      <property name="text">
+       <string>Tighten Y</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="4">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxYMin">
+      <property name="prefix">
+       <string>y min: </string>
+      </property>
+      <property name="minimum">
+       <double>-999999999999999983222784.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000000000000004764729344.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="3">
+     <widget class="QCheckBox" name="checkBoxTightenX">
+      <property name="text">
+       <string>Tighten X</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="3">
+     <widget class="QSpinBox" name="spinBoxXRate">
+      <property name="suffix">
+       <string> /s</string>
+      </property>
+      <property name="prefix">
+       <string>rate: </string>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="3">
+     <widget class="QLineEdit" name="lineEditYLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="placeholderText">
+       <string>y label</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="7">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="4">
+     <widget class="QPushButton" name="pushButtonCloseWriter">
+      <property name="text">
+       <string>Close Writer</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="6">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxGraphAlpha">
+      <property name="prefix">
+       <string>alpha: </string>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>0.850000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="2">
+     <widget class="QLineEdit" name="lineEditXLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="placeholderText">
+       <string>x label</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="pushButtonPlay">
+      <property name="text">
+       <string>Play</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="pushButtonPause">
+      <property name="text">
+       <string>Pause</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="5">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxYMax">
+      <property name="prefix">
+       <string>y max: </string>
+      </property>
+      <property name="minimum">
+       <double>-999999999999999983222784.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000000000000004764729344.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="5">
+     <widget class="QSpinBox" name="spinBoxLineWeight">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>lineweight: </string>
+      </property>
+      <property name="value">
+       <number>2</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxWriterFps">
+      <property name="prefix">
+       <string>writer fps: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="pushButtonOpenWriter">
+      <property name="text">
+       <string>Open Writer...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
+     <widget class="QSpinBox" name="spinBoxGraphX">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>pos x: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="2">
+     <widget class="QSpinBox" name="spinBoxXOffset">
+      <property name="suffix">
+       <string/>
+      </property>
+      <property name="prefix">
+       <string>offset: </string>
+      </property>
+      <property name="minimum">
+       <number>-999999999</number>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="4">
+     <widget class="QSpinBox" name="spinBoxXWindow">
+      <property name="prefix">
+       <string>window: </string>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+      <property name="value">
+       <number>1000</number>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="2">
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxXMin">
+      <property name="prefix">
+       <string>x min: </string>
+      </property>
+      <property name="minimum">
+       <double>-999999999999999983222784.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000000000000004764729344.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButtonLoadVideo">
+      <property name="text">
+       <string>Load Video...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QPushButton" name="pushButtonZoomOut">
+      <property name="text">
+       <string>Zoom Out</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="pushButtonFrameBack">
+      <property name="text">
+       <string>Frame Back</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1" colspan="6">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="6">
+     <widget class="QCheckBox" name="checkBoxLoop">
+      <property name="text">
+       <string>Loop</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4">
+     <widget class="QPushButton" name="pushButtonFrameForward">
+      <property name="text">
+       <string>Frame Forward</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0" colspan="8">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item row="8" column="0">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="2" colspan="2">
+     <widget class="QLineEdit" name="lineEditFileName"/>
+    </item>
+    <item row="11" column="2">
+     <widget class="QCheckBox" name="checkBoxAutoScaleX">
+      <property name="text">
+       <string>Auto Scale X</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="3">
+     <widget class="QSpinBox" name="spinBoxMarginRight">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>margin right: </string>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+      <property name="value">
+       <number>30</number>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="4">
+     <widget class="QSpinBox" name="spinBoxMarginTop">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>margin top: </string>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+      <property name="value">
+       <number>40</number>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="5">
+     <widget class="QSpinBox" name="spinBoxMarginBottom">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>margin bot: </string>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+      <property name="value">
+       <number>80</number>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QSpinBox" name="spinBoxMarginLeft">
+      <property name="suffix">
+       <string> px</string>
+      </property>
+      <property name="prefix">
+       <string>margin left: </string>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+      <property name="value">
+       <number>120</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1291</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>pushButtonLoadVideo</tabstop>
+  <tabstop>lineEditFileName</tabstop>
+  <tabstop>lineEditFileNameOut</tabstop>
+  <tabstop>doubleSpinBoxFpsSet</tabstop>
+  <tabstop>pushButtonPlay</tabstop>
+  <tabstop>pushButtonPause</tabstop>
+  <tabstop>pushButtonFrameBack</tabstop>
+  <tabstop>pushButtonFrameForward</tabstop>
+  <tabstop>spinBoxFrame</tabstop>
+  <tabstop>checkBoxLoop</tabstop>
+  <tabstop>pushButtonZoomIn</tabstop>
+  <tabstop>pushButtonZoomOut</tabstop>
+  <tabstop>pushButtonLoadGraph</tabstop>
+  <tabstop>spinBoxGraphX</tabstop>
+  <tabstop>spinBoxGraphY</tabstop>
+  <tabstop>spinBoxGraphW</tabstop>
+  <tabstop>spinBoxGraphH</tabstop>
+  <tabstop>doubleSpinBoxGraphAlpha</tabstop>
+  <tabstop>checkBoxHasHeaders</tabstop>
+  <tabstop>lineEditXLabel</tabstop>
+  <tabstop>lineEditYLabel</tabstop>
+  <tabstop>checkBoxAutoScaleX</tabstop>
+  <tabstop>doubleSpinBoxXMin</tabstop>
+  <tabstop>doubleSpinBoxXMax</tabstop>
+  <tabstop>checkBoxTightenX</tabstop>
+  <tabstop>checkBoxAutoScaleY</tabstop>
+  <tabstop>doubleSpinBoxYMin</tabstop>
+  <tabstop>doubleSpinBoxYMax</tabstop>
+  <tabstop>checkBoxTightenY</tabstop>
+  <tabstop>spinBoxXOffset</tabstop>
+  <tabstop>spinBoxXRate</tabstop>
+  <tabstop>spinBoxXWindow</tabstop>
+  <tabstop>spinBoxLineWeight</tabstop>
+  <tabstop>graphicsView</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
